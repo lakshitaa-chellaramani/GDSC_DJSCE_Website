@@ -1,11 +1,10 @@
-import Events from "./pages/Events"
-import Team from "./pages/Team"
+import React from "react";
+import RouterMain from "./router";
 
 export default function App() {
   return (
     <>
-    <Events/>
-    <Team />
+      <RouterMain />
     </>
-  )
+  );
 }
