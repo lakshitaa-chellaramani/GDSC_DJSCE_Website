@@ -23,6 +23,8 @@ code {
     monospace;
 }
 
+
+
 @layer utilities {
   @variants responsive {
     /* Hide scrollbar for Chrome, Safari and Opera */
@@ -36,4 +38,37 @@ code {
         scrollbar-width: none;  /* Firefox */
     }
   }
+}
+
+  @layer components{
+    .color-border{
+      position: absolute;
+      width: 40%;
+      height: 150%;
+      background: #40E0D0;
+    /* background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
+    background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0); */
+    background: -webkit-linear-gradient(to right, red, blue, green,yellow);
+    background: linear-gradient(to right, red, blue, green,yellow);
+      animation: glowing01 5s linear infinite;
+      transform-origin: center;
+      animation: glowing 5s linear infinite;
+    }
+    .cardBox{
+      position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden; 
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px,
+    rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;
+    
+    }
+  }
+  @keyframes glowing {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
 }

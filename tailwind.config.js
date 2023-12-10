@@ -27,7 +27,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        roboto: ['Roboto Condensed', 'sans-serif']
+        roboto: ['Roboto Condensed', 'sans-serif'],
+        montserrat: ["Montserrat" , "sans-serif"]
       }
     },
   },
