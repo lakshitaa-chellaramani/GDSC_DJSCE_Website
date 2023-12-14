@@ -13,7 +13,6 @@ const RouterMain = () => {
           <Route path="/aboutUs" element={<AboutUs/>} />
           <Route path="/team" element={<Team/>} />
           <Route path="/events" element={<Events/>} />
-
         </Routes>
       </div>
     </Router>

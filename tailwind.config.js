@@ -28,7 +28,8 @@ module.exports = {
     extend: {
       fontFamily: {
         roboto: ['Roboto Condensed', 'sans-serif'],
-        montserrat: ["Montserrat" , "sans-serif"]
+        montserrat: ["Montserrat" , "sans-serif"],
+        gSans:["Google Sans", "sans-serif"]
       }
     },
   },

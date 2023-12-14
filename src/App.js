@@ -7,10 +7,7 @@ import RouterMain from "./router";
 export default function App() {
   return (
     <>
-    <Navbar/>
-   <Hero/>
-   <Footer/>
-
+      <RouterMain/>
     </>
   )
 }

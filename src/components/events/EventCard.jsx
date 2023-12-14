@@ -7,16 +7,21 @@ const EventCard = (props) => {
   const [flipped, setFlipped] = useState(false);
   const [showArrow, setShowArrow] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
+
   const toggleClass = () => {
-    const card = document.getElementById(`card${props.id}_${props.small}`);
-    console.log(`card${props.id}_${props.small}`);
-    if (!flipped) {
-      card.style.transform = "rotateY(180deg)";
+    const card = document.getElementById(`card${props.id}`);
+    card.style.transform = "rotateY(180deg)";
       setFlipped(true);
-    } else {
-      card.style.transform = "rotateY(0deg)";
-      setFlipped(false);
+      props.setCardFlippedId(props.id)
+    if((props.cardFlippedId)!=null){
+    const unflipCard=  document.getElementById(`card${props.cardFlippedId}`)
+    unflipCard.style.transform = "rotateY(0deg)";
+    setFlipped(false);
     }
+    console.log(`card${props.id}`);
+    
+      
+    
   };
   const prevSlide=()=>{
     const isFirstSlide = currentImage === 0;
@@ -32,10 +37,10 @@ const EventCard = (props) => {
 
   return (
     <>
-      <div className="group card-holder max-sm:w-[40em] max-sm:h-[50em] max-md:w-[30em] max-md:h-[38em] w-[21em] h-[27em]  transition-all  hover:translate-y-[-1em] cardBox  hover:before:color-border bg-black rounded-xl">
+      <div className="group card-holder max-sm:w-[40em] max-sm:h-[50em] max-md:w-[30em] max-md:h-[38em] w-[21em] h-[27em]  transition-all  hover:translate-y-[-1em] cardBox  hover:before:color-border bg-black rounded-xl md:mt-3">
         <div className="absolute h-[96%] w-[96%] bg-black rounded-xl"></div>
         <div
-          id={`card${props.id}_${props.small}`}
+          id={`card${props.id}`}
           className="relative hover:h-[96%] hover:w-[96%] h-full w-full [transform-style:preserve-3d] transition-all duration-500 rounded-xl "
         >
           <div
@@ -48,17 +53,17 @@ const EventCard = (props) => {
               className="h-full"
               style={{ color: `${cardElement.titleFrontColor}` }}
             >
-              <div className="flex flex-col px-3 max-md:px-6  w-[75%] max-md:w-[90%] font-roboto pt-[25%] h-[90%]">
-                <span className="text-4xl max-sm:text-7xl max-md:text-5xl leading-[1.3em] font-semibold ">
+              <div className="flex flex-col px-3 max-md:px-6  w-[75%] max-md:w-[90%]  pt-[25%] h-[90%]">
+                <span className="text-3xl max-sm:text-7xl max-md:text-5xl leading-[1.3em] font-semibold font-montserrat">
                   <p>{cardElement.titleFrontTop} {cardElement.id}</p>
                   <p>{cardElement.titleFrontBottom}</p>
                 </span>
-                <span className="text-lg max-md:text-3xl max-sm:text-5xl leading-[1.3em] max-md:w-[70%]">
+                <span className="text-lg max-md:text-4xl max-sm:text-5xl leading-[1.3em] max-md:w-[70%] font-gSans">
                   <p className="mt-4">{cardElement.descBack}</p>
                 </span>
               </div>
               <div className="mt-auto pl-3 font-light w-full flex justify-between">
-                <span className="max-md:text-3xl max-sm:text-4xl mx-3">
+                <span className="max-md:text-xl max-sm:text-4xl mx-3">
                   <p className="inline-block">Date: {cardElement.date}</p>
                 </span>
                 <div className="mt-auto pl-3 font-light w-full flex justify-end absolute bottom-5 right-2">
@@ -84,7 +89,7 @@ const EventCard = (props) => {
                 style={{ color: `${cardElement.backColor}` }}
               >
                 <div className="relative w-full  h-[16em] max-md:h-[20em] group mt-6 max-sm:h-[22em]"   onMouseOver={()=>setShowArrow(true)} onMouseLeave={()=>setShowArrow(false)}>
-                  <div className="bg-cover h-[16em] w-[16em] max-md:h-[20em] max-md:w-[20em] max-sm:h-[22em] max-sm:w-[22em] mx-auto transition-all duration-500 rounded-xl border-2 border-solid border-blue-400"
+                  <div className="bg-cover h-[15em] w-[15em] max-md:h-[20em] max-md:w-[22em] max-sm:h-[22em] max-sm:w-[20em] mx-auto transition-all duration-500 rounded-xl border-2 border-solid border-blue-400"
                     style={{
                       backgroundImage: `url(${cardElement.backAlbum[currentImage]})`,
                     }} 
@@ -100,12 +105,12 @@ const EventCard = (props) => {
 
 
                   <div className="flex justify-center flex-col mt-1 ">
-                    <span className="pl-3 pt-3 text-xl max-md:text-3xl max-sm:text-4xl max-sm:leading-[5rem]  font-roboto">
+                    <span className="pl-3 text-xl max-md:text-3xl max-sm:text-4xl max-sm:leading-[5rem]  font-gSans">
                       <ul>
                         <li>Date: <span className="text-blue-200">{cardElement.date}</span></li>
                         <li>Time: <span className="text-blue-200">{cardElement.time}</span></li>
                         <li>Venue: <span className="text-blue-200">{cardElement.venue}</span></li>
-                        <li className="mt-2 underline text-blue-500"><a href={cardElement.link}>Registration Link</a></li>
+                        <li className="underline text-blue-500"><a href={cardElement.link}>Registration Link</a></li>
                       </ul>
                     </span>
                   </div>
