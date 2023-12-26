@@ -3,10 +3,10 @@ import React from 'react'
 const Footer = () => {
   return (
     <div>
-      <div className='border-t mt-4 border-gray-200'></div>
-    <footer className="w-full bg-white  dark:bg-gray-900 py-16">
+      <div className='border-t mt-4 border-white-200'></div>
+    <footer className="w-full bg-white  dark:bg-white-900 py-16">
     <div className="md:px-12 lg:px-28">
-      <div className="container m-auto space-y-6 text-gray-600 dark:text-gray-300">
+      <div className="container m-auto space-y-6 text-white-600 dark:text-white-300">
         <img src="GDSCLogo.jpg" alt="" className="m-auto w-40" />
         
         <div className="m-auto flex w-max items-center justify-between space-x-4">
