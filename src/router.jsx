@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import AboutUs from './pages/aboutUs';
+import AboutUs from './pages/AboutUs';
 import Team from "./pages/Team";
 
 const RouterMain = () => {
@@ -9,8 +9,10 @@ const RouterMain = () => {
     <Router>
       <div>
         <Routes>
-          <Route path="/aboutUs" element={<AboutUs/>} />
+          <Route path="/aboutus" element={<AboutUs/>} />
           <Route path="/team" element={<Team/>} />
+          <Route path="/event" element={<AboutUs/>} />
+          <Route path="/gallery" element={<Team/>} />
         </Routes>
       </div>
     </Router>

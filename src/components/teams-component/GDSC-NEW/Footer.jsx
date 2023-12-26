@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="w-full bg-white  dark:bg-gray-900 py-16">
     <div className="md:px-12 lg:px-28">
       <div className="container m-auto space-y-6 text-gray-600 dark:text-gray-300">
-        <img src="GDSCLogo.jpg" alt="logo tailus" className="m-auto w-40" />
+        <img src="GDSCLogo.jpg" alt="" className="m-auto w-40" />
         <ul
           role="list"
           className="flex flex-col  items-center justify-center gap-4 py-4 sm:flex-row sm:gap-8"
