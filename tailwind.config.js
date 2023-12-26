@@ -25,7 +25,13 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        roboto: ['Roboto Condensed', 'sans-serif'],
+        montserrat: ["Montserrat" , "sans-serif"],
+        gSans:["Google Sans", "sans-serif"]
+      }
+    },
   },
   plugins: [Myclass],
 }

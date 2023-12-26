@@ -8,6 +8,7 @@ import AboutUs from "./pages/AboutUs";
 import Events from "./pages/Events";
 import Gallery from "./pages/Gallery";
 import Team from "./pages/Team";
+import ContactUs from "./pages/ContactUs";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
     <Route path="/events" element={<Events/>} />
     <Route path="/gallery" element={<Gallery/>} />
     <Route path="/team" element={<Team/>} />
+    <Route path="/contactus" element={<ContactUs/>} />
     </Routes>
     <Footer/>
     </BrowserRouter>

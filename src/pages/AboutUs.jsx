@@ -6,12 +6,12 @@ import rocket from "../assets/ABOUTUS/rocket.png";
 import bulb from "../assets/ABOUTUS/light-bulb.png";
 import youth from "../assets/ABOUTUS/youth.png";
 import teamwork from "../assets/ABOUTUS/teamwork.png";
-import brainCircuit from "../assets/ABOUTUS/brain-circuit.png";
-import cloud from "../assets/ABOUTUS/cloud.png";
-import globe from "../assets/ABOUTUS/globe.png";
-import laptop from "../assets/ABOUTUS/laptop.png";
-import smartphone from "../assets/ABOUTUS/smartphone.png";
-import wrench from "../assets/ABOUTUS/wrench.png";
+// import brainCircuit from "../assets/ABOUTUS/brain-circuit.png";
+// import cloud from "../assets/ABOUTUS/cloud.png";
+// import globe from "../assets/ABOUTUS/globe.png";
+// import laptop from "../assets/ABOUTUS/laptop.png";
+// import smartphone from "../assets/ABOUTUS/smartphone.png";
+// import wrench from "../assets/ABOUTUS/wrench.png";
 import gcc from "../assets/ABOUTUS/gccp.jpg";
 import projects from "../assets/ABOUTUS/projects.jpg";
 import seminar from "../assets/ABOUTUS/seminar.jpg";
@@ -127,7 +127,7 @@ const AboutUs = () => {
       <section className="main2 flex justify-center items-center flex-col  gap-[3rem] px-[3rem] py-[2rem]">
         <div className="w-full relative text-center" data-aos="fade-up">
           <p
-            className="text-[3rem] text-blue-950 relative inline-block"
+            className="text-[3rem] text-blue-950 relative inline-block mb-6"
             style={{ fontFamily: "Montserrat,sans-serif" }}
           >
             What We Do
@@ -169,7 +169,6 @@ const AboutUs = () => {
                 className="w-[16.5rem] flex  flex-row justify-center gap-8 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
                 data-aos="fade-up"
               >
-                <img src={smartphone} alt="smartphone" />
                 <p
                   className=" text-base"
                   style={{ fontFamily: "Google Sans,sans-serif" }}
@@ -182,7 +181,6 @@ const AboutUs = () => {
                 className="w-[16.5rem] flex flex-row justify-center gap-8 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
                 data-aos="fade-up"
               >
-                <img src={globe} alt="web" />
                 <p
                   className=" text-base"
                   style={{ fontFamily: "Google Sans,sans-serif" }}
@@ -195,29 +193,39 @@ const AboutUs = () => {
                 className="w-[16.5rem] flex flex-row justify-center gap-6 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
                 data-aos="fade-up"
               >
-                <img src={brainCircuit} alt="AIML" />
                 <p
                   className=" text-base"
                   style={{ fontFamily: "Google Sans,sans-serif" }}
                 >
                   {" "}
-                  AI-ML Development
+                  Machine Learning
                 </p>
               </div>
               <div
                 className="w-[16.5rem] flex flex-row justify-center gap-12 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
                 data-aos="fade-up"
               >
-                <img src={wrench} alt="logistics" />
                 <p
                   className=" text-base"
                   style={{ fontFamily: "Google Sans,sans-serif" }}
                 >
                   {" "}
-                  Logistics
+                  Marketing
                 </p>
               </div>
               <div
+                className="w-[16.5rem] flex flex-row justify-center gap-4 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
+                data-aos="fade-up"
+              >
+                <p
+                  className=" text-base"
+                  style={{ fontFamily: "Google Sans,sans-serif" }}
+                >
+                  {" "}
+                  Creatives
+                </p>
+              </div>
+              {/* <div
                 className=" w-[16.5rem] flex flex-row justify-between gap-4 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
                 data-aos="fade-up"
               >
@@ -229,18 +237,29 @@ const AboutUs = () => {
                   {" "}
                   Competitive Programming
                 </p>
-              </div>
+              </div> */}
               <div
                 className="w-[16.5rem] flex flex-row justify-center gap-4 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
                 data-aos="fade-up"
               >
-                <img src={cloud} alt="cloud" />
                 <p
                   className=" text-base"
                   style={{ fontFamily: "Google Sans,sans-serif" }}
                 >
                   {" "}
-                  Cloud Computing
+                  Logistics
+                </p>
+              </div>
+              <div
+                className="w-[16.5rem] flex flex-row justify-center gap-4 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
+                data-aos="fade-up"
+              >
+                <p
+                  className=" text-base"
+                  style={{ fontFamily: "Google Sans,sans-serif" }}
+                >
+                  {" "}
+                  Publicity
                 </p>
               </div>
             </div>
@@ -258,7 +277,7 @@ const AboutUs = () => {
       <section className="main3 flex justify-center items-center flex-col  gap-[3rem] px-[3rem] py-[2rem]">
         <div className="w-full relative text-center" data-aos="fade-up">
           <p
-            className="text-[3rem] text-blue-950 relative inline-block"
+            className="text-[3rem] text-blue-950 relative inline-block mb-6"
             style={{ fontFamily: "Montserrat,sans-serif" }}
           >
             Vision
@@ -289,11 +308,14 @@ const AboutUs = () => {
             style={{ fontFamily: "Montserrat,sans-serif" }}
             data-aos="fade-up"
           >
-            And UPGRADING OURSELVES!{" "}
+            And also UPGRADING OURSELVES!{" "}
           </p>
         </div>
         <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
-          <div class="group relative cursor-pointer items-center justify-center overflow-hidden rounded-xl shadow-xl shadow-black/30"data-aos="fade-up">
+          <div
+            class="group relative cursor-pointer items-center justify-center overflow-hidden rounded-xl shadow-xl shadow-black/30"
+            data-aos="fade-up"
+          >
             <div class="h-96 w-72">
               <img
                 class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
@@ -303,16 +325,28 @@ const AboutUs = () => {
             </div>
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
             <div class="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
-              <h1 class=" text-3xl font-bold text-white pb-4" style={{ fontFamily: "Montserrat,sans-serif" }}>
-                Google Cloud Campaign
+              <h1
+                class=" text-3xl font-bold text-white pb-4"
+                style={{ fontFamily: "Montserrat,sans-serif" }}
+              >
+                GDSC Study Jams{" "}
               </h1>
-              <p class="mb-3 text-lg  text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ fontFamily: "Google Sans,sans-serif" }}>
-              Learn Google Cloud for Free from resources provided by google and with the guidence of our Core Team
+              <p
+                class="mb-3 text-lg  text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                style={{ fontFamily: "Google Sans,sans-serif" }}
+              >
+                Participating in GDSC study jams unlocks the opportunity to
+                access premium courses at no cost, allowing individuals to
+                acquire valuable skills and knowledge without the financial
+                barrier.
               </p>
             </div>
           </div>
-          
-          <div class="group relative cursor-pointer items-center justify-center overflow-hidden rounded-xl shadow-xl shadow-black/30"data-aos="fade-up">
+
+          <div
+            class="group relative cursor-pointer items-center justify-center overflow-hidden rounded-xl shadow-xl shadow-black/30"
+            data-aos="fade-up"
+          >
             <div class="h-96 w-72">
               <img
                 class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
@@ -322,15 +356,26 @@ const AboutUs = () => {
             </div>
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
             <div class="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
-            <h1 class=" text-3xl font-bold text-white pb-4" style={{ fontFamily: "Montserrat,sans-serif" }}>
-                Projects
+              <h1
+                class=" text-3xl font-bold text-white pb-4"
+                style={{ fontFamily: "Montserrat,sans-serif" }}
+              >
+                Technical Events
               </h1>
-              <p class="mb-3 text-lg  text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ fontFamily: "Google Sans,sans-serif" }}>
-              Learn Google Cloud for Free from resources provided by google and with the guidence of our Core Team
+              <p
+                class="mb-3 text-lg  text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                style={{ fontFamily: "Google Sans,sans-serif" }}
+              >
+                Discover a world of innovation at our hackathons and a spectrum
+                of tech events. Join us to elevate your skills and connect with
+                a vibrant community of tech enthusiasts.
               </p>
             </div>
           </div>
-          <div class="group relative cursor-pointer items-center justify-center overflow-hidden rounded-xl shadow-xl shadow-black/30"data-aos="fade-up">
+          <div
+            class="group relative cursor-pointer items-center justify-center overflow-hidden rounded-xl shadow-xl shadow-black/30"
+            data-aos="fade-up"
+          >
             <div class="h-96 w-72">
               <img
                 class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
@@ -340,15 +385,26 @@ const AboutUs = () => {
             </div>
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
             <div class="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
-            <h1 class=" text-3xl font-bold text-white pb-4" style={{ fontFamily: "Montserrat,sans-serif" }}>
-                Seminar
+              <h1
+                class=" text-3xl font-bold text-white pb-4"
+                style={{ fontFamily: "Montserrat,sans-serif" }}
+              >
+                Overall Development
               </h1>
-              <p class="mb-3 text-lg  text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ fontFamily: "Google Sans,sans-serif" }}>
-              Learn Google Cloud for Free from resources provided by google and with the guidence of our Core Team
+              <p
+                class="mb-3 text-lg  text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                style={{ fontFamily: "Google Sans,sans-serif" }}
+              >
+                Ignite holistic growth with us! Our programs fuse tech skills,
+                personal development, and community engagement, creating a
+                supportive environment for your advancement.
               </p>
             </div>
           </div>
-          <div class="group relative cursor-pointer items-center justify-center overflow-hidden rounded-xl shadow-xl shadow-black/30"data-aos="fade-up">
+          <div
+            class="group relative cursor-pointer items-center justify-center overflow-hidden rounded-xl shadow-xl shadow-black/30"
+            data-aos="fade-up"
+          >
             <div class="h-96 w-72">
               <img
                 class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
@@ -358,11 +414,19 @@ const AboutUs = () => {
             </div>
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
             <div class="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
-            <h1 class=" text-3xl font-bold text-white pb-4" style={{ fontFamily: "Montserrat,sans-serif" }}>
+              <h1
+                class=" text-3xl font-bold text-white pb-4"
+                style={{ fontFamily: "Montserrat,sans-serif" }}
+              >
                 Workshops
               </h1>
-              <p class="mb-3 text-lg  text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ fontFamily: "Google Sans,sans-serif" }}>
-              Learn Google Cloud for Free from resources provided by google and with the guidence of our Core Team
+              <p
+                class="mb-3 text-lg  text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                style={{ fontFamily: "Google Sans,sans-serif" }}
+              >
+                Dive into practical learning with expert-led workshops! Gain
+                valuable skills and real-world insights in a dynamic
+                environment. Join us for a transformative experience.
               </p>
             </div>
           </div>

@@ -8,19 +8,7 @@ const Footer = () => {
     <div className="md:px-12 lg:px-28">
       <div className="container m-auto space-y-6 text-gray-600 dark:text-gray-300">
         <img src="GDSCLogo.jpg" alt="" className="m-auto w-40" />
-        <ul
-          role="list"
-          className="flex flex-col  items-center justify-center gap-4 py-4 sm:flex-row sm:gap-8"
-        >
-          <li role="listitem"  className="text-gray-700 hover:text-gray-900 hover:font-medium font-regular cursor-pointer">Home</li>
-          <li role="listitem"  className="text-gray-700 hover:text-gray-900 hover:font-medium font-regular cursor-pointer">About Us</li>
-          <li role="listitem"  className="text-gray-700 hover:text-gray-900 hover:font-medium font-regular cursor-pointer">Events</li>
-          <li role="listitem"  className="text-gray-700 hover:text-gray-900 hover:font-medium font-regular cursor-pointer">Gallery</li>
-          <li role="listitem"  className="text-gray-700 hover:text-gray-900 hover:font-medium font-regular cursor-pointer">Our Team</li>
-          <li role="listitem"  className="text-gray-700 hover:text-gray-900 hover:font-medium font-regular cursor-pointer">Contact Us</li>
-
-          
-        </ul>
+        
         <div className="m-auto flex w-max items-center justify-between space-x-4">
           <a href="tel:+243996660436" aria-label="call">
             <svg

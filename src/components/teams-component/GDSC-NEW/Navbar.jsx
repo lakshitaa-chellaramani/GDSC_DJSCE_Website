@@ -34,9 +34,11 @@ const Navbar = () => {
           </button>
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-              <li>
+              <Link to ="/">
+            <li>
                 <h1 className="nav-item">Home</h1>
               </li>
+              </Link>
               <Link to="/aboutus"><li>
                 <h1 className="nav-item">About Us</h1>
               </li></Link>
@@ -45,17 +47,21 @@ const Navbar = () => {
                 <h1 className="nav-item">Events</h1>
               </li>
               </Link>
+              <Link to="/gallery">
               <li>
                 <h1 className="nav-item">Gallery</h1>
               </li>
+              </Link>
               <Link to="/team">
               <li>
                 <h1 className="nav-item">Our Team</h1>
               </li>
               </Link>
+              <Link to="/contactus">
               <li>
                 <h1 className="nav-item">Contact Us</h1>
               </li>
+              </Link>
             </ul>
           </div>
         </div>
