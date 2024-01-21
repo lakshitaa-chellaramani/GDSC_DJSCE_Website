@@ -48,7 +48,7 @@ const Gallery = () => {
                 data.img &&
                 <div className='w-full h-full bg-[rgba(0,0,0,0.5)] fixed top-[0] flex justify-center items-center'>
                         <button className='absolute top-[10px] right-[20px] [rotate:45deg] rounded-[50%] text-[60px] h-auto p-[none] bg-none border-[none] text-[white] cursor-pointer' onClick={() => imgAction("close")}>+</button>
-                        <button className='fixed top-2/4 bg-none border-[none] left-[10px] text-center cursor-pointer' onClick={() => imgAction("prev-img")}><img src={leftImg} style={{
+                        <button className='fixed top-2/4 bg-none border-[none] left-[10px] text-center cursor-pointer' onClick={() => imgAction("prev-img")}><img src={leftImg} alt='Error' style={{
                         width: "50px",
                         height: "50px"
                     }} />
@@ -56,11 +56,12 @@ const Gallery = () => {
                     <img
                             className='w-auto max-h-[90%] max-w-[90%]'
                         src={data.img}
+                        alt='Error'
                     />
                         <button className='fixed top-2/4 bg-none border-[none] right-[10px] text-center cursor-pointer' onClick={() => imgAction("next-img")} style={{
                             width: "50px",
                             height: "50px"
-                        }}><img src={rightImg} /></button>
+                        }}><img src={rightImg} alt='Error'/></button>
                 </div>
             }
             <div style={{ padding: "10px" }}>

@@ -1,9 +1,8 @@
 import React from "react";
-import { motion, progress } from "framer-motion";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo} from "react";
 
 function Hero() {
-  const wordData = ['Welcome to', ' स्वागत है', 'خوش آمدید', 'स्वागत आहे', 'স্বাগত মানা', 'ਸੁਆਗਤ ਹੈ'];
+  const wordData = useMemo(() => ['Welcome to', ' स्वागत है', 'خوش آمدید', 'स्वागत आहे', 'স্বাগত মানা', 'ਸੁਆਗਤ ਹੈ'], []);
   const [currWord, setCurrWord] = useState(wordData[0]);
   const index = useRef(0);
 

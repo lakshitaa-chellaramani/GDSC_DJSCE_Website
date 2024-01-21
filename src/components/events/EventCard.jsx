@@ -7,6 +7,7 @@ const EventCard = (props) => {
   const [flipped, setFlipped] = useState(false);
   const [showArrow, setShowArrow] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
+  console.log(flipped);
 
   const toggleClass = () => {
     const card = document.getElementById(`card${props.id}`);

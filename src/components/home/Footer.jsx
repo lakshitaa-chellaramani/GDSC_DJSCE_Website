@@ -35,7 +35,7 @@ const Footer = () => {
               ></path>
             </svg>
           </a>
-          <a href="#" title="facebook" target="blank" aria-label="facebook">
+          <a href="/" title="facebook" target="blank" aria-label="facebook">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -47,7 +47,7 @@ const Footer = () => {
               ></path>
             </svg>
           </a>
-          <a href="#" title="linkedin" target="blank" aria-label="linkedin">
+          <a href="/" title="linkedin" target="blank" aria-label="linkedin">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
