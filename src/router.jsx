@@ -1,3 +1,4 @@
+import { useState,useEffect } from "react";
 import Footer from "./components/home/Footer"
 import Hero from "./components/home/Hero"
 import Navbar from "./components/home/Navbar"
@@ -7,24 +8,39 @@ import AboutUs from "./pages/AboutUs";
 import Events from "./pages/Events";
 import Gallery from "./pages/Gallery";
 import Team from "./pages/Team";
+import Loader from "./components/loader/Loader";
 import ContactUs from "./pages/ContactUs";
 
 export default function RouterMain() {
-  return (
-    <>
-    <BrowserRouter>
-    <Navbar/>
-    <Routes>
-    <Route path="/" element={<Hero/>} />
-    <Route path="/aboutus" element={<AboutUs/>} />
-    <Route path="/events" element={<Events/>} />
-    <Route path="/gallery" element={<Gallery/>} />
-    <Route path="/team" element={<Team/>} />
-    <Route path="/contactus" element={<ContactUs/>} />
-    </Routes>
-    <Footer/>
-    </BrowserRouter>
+  const [loading, setLoading] = useState(true);
 
-    </>
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  return (
+    <BrowserRouter>
+    <div className="block bg-App-bg bg-no-repeat bg-fixed overflow-auto bg-cover">
+      {loading ? (
+          <Loader />
+        ) :(
+          <>
+          <Navbar />
+          <Routes>
+          <Route path="/" element={<AboutUs/>} />
+          <Route path="/events" element={<Events/>} />
+          <Route path="/gallery" element={<Gallery/>} />
+          <Route path="/team" element={<Team/>} />
+          <Route path="/contactus" element={<ContactUs/>} />
+          </Routes>
+          <Footer/>
+          </>
+        )}
+        </div>
+        </BrowserRouter>
   )
 }

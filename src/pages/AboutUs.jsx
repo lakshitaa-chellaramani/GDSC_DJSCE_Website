@@ -18,12 +18,14 @@ import seminar from "../assets/ABOUTUS/seminar.jpg";
 import workshops from "../assets/ABOUTUS/workshops.jpg";
 
 import "@darenft/react-3d-hover-card/dist/style.css";
+import Hero from "../components/home/Hero";
 
 const AboutUs = () => {
   AOS.init();
 
   return (
     <>
+      <Hero/>
       <section className="main1 flex justify-center items-center flex-col gap-[3rem] px-[1rem] py-[2rem] overflow-hidden">
         <div className="w-full relative text-center" data-aos="fade-up">
           <p
@@ -122,156 +124,6 @@ const AboutUs = () => {
               </p>
             </div>
           </HoverCard>
-        </div>
-      </section>
-      <section className="main2 flex justify-center items-center flex-col  gap-[3rem] px-[3rem] py-[2rem]">
-        <div className="w-full relative text-center" data-aos="fade-up">
-          <p
-            className="text-[3rem] text-blue-950 relative inline-block mb-6"
-            style={{ fontFamily: "Montserrat,sans-serif" }}
-          >
-            What We Do
-            <span
-              className="absolute bottom-0 left-1/2 transform -translate-x-1/2 inline-block w-full h-1 "
-              style={{
-                backgroundImage:
-                  "linear-gradient(to right, red, red,red, yellow,yellow, yellow, green,green, green, blue,blue, blue)",
-              }}
-            ></span>
-          </p>
-          <p
-            className=" text-base"
-            style={{ fontFamily: "Montserrat,sans-serif" }}
-            data-aos="fade-up"
-          >
-            Welcome to GDSC-DJSCE , where one gets immense knowledge from the
-            campaigns, workshops, and other events.{" "}
-          </p>
-          <p
-            className=" text-base"
-            style={{ fontFamily: "Montserrat,sans-serif" }}
-            data-aos="fade-up"
-          >
-            Shaping tomorrow's world, TODAY!{" "}
-          </p>
-        </div>
-        <div className=" w-full flex flex-col lg:flex-row justify-center items-center px-[0rem] sm:px-[5rem]">
-          <div>
-            <p
-              className=" text-3xl pb-8"
-              style={{ fontFamily: "Montserrat,sans-serif" }}
-              data-aos="fade-up"
-            >
-              We Work On:
-            </p>
-            <div className=" flex flex-wrap gap-x-10 gap-y-10 justify-center items-center">
-              <div
-                className="w-[16.5rem] flex  flex-row justify-center gap-8 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
-                data-aos="fade-up"
-              >
-                <p
-                  className=" text-base"
-                  style={{ fontFamily: "Google Sans,sans-serif" }}
-                >
-                  {" "}
-                  App Development
-                </p>
-              </div>
-              <div
-                className="w-[16.5rem] flex flex-row justify-center gap-8 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
-                data-aos="fade-up"
-              >
-                <p
-                  className=" text-base"
-                  style={{ fontFamily: "Google Sans,sans-serif" }}
-                >
-                  {" "}
-                  Web Development
-                </p>
-              </div>
-              <div
-                className="w-[16.5rem] flex flex-row justify-center gap-6 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
-                data-aos="fade-up"
-              >
-                <p
-                  className=" text-base"
-                  style={{ fontFamily: "Google Sans,sans-serif" }}
-                >
-                  {" "}
-                  Machine Learning
-                </p>
-              </div>
-              <div
-                className="w-[16.5rem] flex flex-row justify-center gap-12 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
-                data-aos="fade-up"
-              >
-                <p
-                  className=" text-base"
-                  style={{ fontFamily: "Google Sans,sans-serif" }}
-                >
-                  {" "}
-                  Marketing
-                </p>
-              </div>
-              <div
-                className="w-[16.5rem] flex flex-row justify-center gap-4 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
-                data-aos="fade-up"
-              >
-                <p
-                  className=" text-base"
-                  style={{ fontFamily: "Google Sans,sans-serif" }}
-                >
-                  {" "}
-                  Creatives
-                </p>
-              </div>
-              {/* <div
-                className=" w-[16.5rem] flex flex-row justify-between gap-4 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
-                data-aos="fade-up"
-              >
-                <img src={laptop} alt="laptop" />
-                <p
-                  className=" text-base"
-                  style={{ fontFamily: "Google Sans,sans-serif" }}
-                >
-                  {" "}
-                  Competitive Programming
-                </p>
-              </div> */}
-              <div
-                className="w-[16.5rem] flex flex-row justify-center gap-4 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
-                data-aos="fade-up"
-              >
-                <p
-                  className=" text-base"
-                  style={{ fontFamily: "Google Sans,sans-serif" }}
-                >
-                  {" "}
-                  Logistics
-                </p>
-              </div>
-              <div
-                className="w-[16.5rem] flex flex-row justify-center gap-4 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
-                data-aos="fade-up"
-              >
-                <p
-                  className=" text-base"
-                  style={{ fontFamily: "Google Sans,sans-serif" }}
-                >
-                  {" "}
-                  Publicity
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className=" pt-[3rem] lg:pt-0">
-            <img
-              className=" w-[100%] sm:w-[80rem]"
-              src={teamwork}
-              alt="teamwork"
-              data-aos="fade-up"
-            />
-          </div>
         </div>
       </section>
       <section className="main3 flex justify-center items-center flex-col  gap-[3rem] px-[3rem] py-[2rem]">
@@ -429,6 +281,156 @@ const AboutUs = () => {
                 environment. Join us for a transformative experience.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="main2 flex justify-center items-center flex-col  gap-[3rem] px-[3rem] py-[2rem]">
+        <div className="w-full relative text-center" data-aos="fade-up">
+          <p
+            className="text-[3rem] text-blue-950 relative inline-block mb-6"
+            style={{ fontFamily: "Montserrat,sans-serif" }}
+          >
+            What We Do
+            <span
+              className="absolute bottom-0 left-1/2 transform -translate-x-1/2 inline-block w-full h-1 "
+              style={{
+                backgroundImage:
+                  "linear-gradient(to right, red, red,red, yellow,yellow, yellow, green,green, green, blue,blue, blue)",
+              }}
+            ></span>
+          </p>
+          <p
+            className=" text-base"
+            style={{ fontFamily: "Montserrat,sans-serif" }}
+            data-aos="fade-up"
+          >
+            Welcome to GDSC-DJSCE , where one gets immense knowledge from the
+            campaigns, workshops, and other events.{" "}
+          </p>
+          <p
+            className=" text-base"
+            style={{ fontFamily: "Montserrat,sans-serif" }}
+            data-aos="fade-up"
+          >
+            Shaping tomorrow's world, TODAY!{" "}
+          </p>
+        </div>
+        <div className=" w-full flex flex-col lg:flex-row justify-center items-center px-[0rem] sm:px-[5rem]">
+          <div>
+            <p
+              className=" text-3xl pb-8"
+              style={{ fontFamily: "Montserrat,sans-serif" }}
+              data-aos="fade-up"
+            >
+              We Work On:
+            </p>
+            <div className=" flex flex-wrap gap-x-10 gap-y-10 justify-center items-center">
+              <div
+                className="w-[16.5rem] flex  flex-row justify-center gap-8 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
+                data-aos="fade-up"
+              >
+                <p
+                  className=" text-base"
+                  style={{ fontFamily: "Google Sans,sans-serif" }}
+                >
+                  {" "}
+                  App Development
+                </p>
+              </div>
+              <div
+                className="w-[16.5rem] flex flex-row justify-center gap-8 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
+                data-aos="fade-up"
+              >
+                <p
+                  className=" text-base"
+                  style={{ fontFamily: "Google Sans,sans-serif" }}
+                >
+                  {" "}
+                  Web Development
+                </p>
+              </div>
+              <div
+                className="w-[16.5rem] flex flex-row justify-center gap-6 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
+                data-aos="fade-up"
+              >
+                <p
+                  className=" text-base"
+                  style={{ fontFamily: "Google Sans,sans-serif" }}
+                >
+                  {" "}
+                  Machine Learning
+                </p>
+              </div>
+              <div
+                className="w-[16.5rem] flex flex-row justify-center gap-12 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
+                data-aos="fade-up"
+              >
+                <p
+                  className=" text-base"
+                  style={{ fontFamily: "Google Sans,sans-serif" }}
+                >
+                  {" "}
+                  Marketing
+                </p>
+              </div>
+              <div
+                className="w-[16.5rem] flex flex-row justify-center gap-4 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
+                data-aos="fade-up"
+              >
+                <p
+                  className=" text-base"
+                  style={{ fontFamily: "Google Sans,sans-serif" }}
+                >
+                  {" "}
+                  Creatives
+                </p>
+              </div>
+              {/* <div
+                className=" w-[16.5rem] flex flex-row justify-between gap-4 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
+                data-aos="fade-up"
+              >
+                <img src={laptop} alt="laptop" />
+                <p
+                  className=" text-base"
+                  style={{ fontFamily: "Google Sans,sans-serif" }}
+                >
+                  {" "}
+                  Competitive Programming
+                </p>
+              </div> */}
+              <div
+                className="w-[16.5rem] flex flex-row justify-center gap-4 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
+                data-aos="fade-up"
+              >
+                <p
+                  className=" text-base"
+                  style={{ fontFamily: "Google Sans,sans-serif" }}
+                >
+                  {" "}
+                  Logistics
+                </p>
+              </div>
+              <div
+                className="w-[16.5rem] flex flex-row justify-center gap-4 px-4 py-2 border-2 border-gray-400 rounded-tr-lg rounded-bl-lg "
+                data-aos="fade-up"
+              >
+                <p
+                  className=" text-base"
+                  style={{ fontFamily: "Google Sans,sans-serif" }}
+                >
+                  {" "}
+                  Publicity
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className=" pt-[3rem] lg:pt-0">
+            <img
+              className=" w-[100%] sm:w-[80rem]"
+              src={teamwork}
+              alt="teamwork"
+              data-aos="fade-up"
+            />
           </div>
         </div>
       </section>

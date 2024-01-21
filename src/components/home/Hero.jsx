@@ -1,34 +1,76 @@
-import React from 'react';
+import React from "react";
+import { motion, progress } from "framer-motion";
+import { useState, useRef, useEffect } from "react";
 
-const Hero = () => {
-  const containerStyles = {
-    backgroundImage: `url('gdscanim.gif')`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  };
+function Hero() {
+  const wordData = ['Welcome to', ' स्वागत है', 'خوش آمدید', 'स्वागत आहे', 'স্বাগত মানা', 'ਸੁਆਗਤ ਹੈ'];
+  const [currWord, setCurrWord] = useState(wordData[0]);
+  const index = useRef(0);
 
-  const buttonStyles = {
-    fontFamily: 'Arial, sans-serif',
-  };
+  useEffect(() => {
+    let interval = null;
 
+    const startAnimation = () => {
+      interval = setInterval(() => {
+        index.current = (index.current + 1) % wordData.length;
+        setCurrWord(wordData[index.current]);
+
+        if (index.current === wordData.length - 1) {
+          setTimeout(() => {
+            setCurrWord(wordData[0]);
+            index.current = 0;
+          }, 800);
+        }
+      }, 800);
+    };
+
+    startAnimation();
+
+    return () => clearInterval(interval);
+  }, [wordData]);
 
   return (
-    <div className="h-screen flex items-center justify-center">
-      <div className="relative bg-gray-800 w-full h-full opacity-75 backdrop-blur-lg" style={containerStyles}>
-        <div className="absolute top-[40vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-black" style={buttonStyles}>
-          <h1 className="text-4xl font-bold mb-4 font-pacifico">Welcome to DJSCE-GDSC!</h1>
-          <p className="text-lg">Explore our community and events.</p>
-          <div className="flex justify-center mt-4">
-            <button className="bg-gradient-to-r from-blue-500 to-green-500 text-white py-3 px-6 rounded-md flex items-center justify-center space-x-2 hover:from-blue-700 hover:to-green-700 transition duration-300 ease-in-out" style={{ fontFamily: 'Arial, sans-serif' }}>
-              <span>Get Started</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-5 w-5">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </button>
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <div className="md:text-8xl text-4xl font-medium text-center mb-0">
+        {currWord}
+      </div>
+
+      <div className="md:text-8xl text-6xl font-semibold text-center">
+        <span className="text-[#EA4335]">G</span>
+        <span className="text-[#4285F4]">D</span>
+        <span className="text-[#34A853]">S</span>
+        <span className="text-[#FBBC05]">C</span> DJSCE,
+      </div>
+
+      
+
+      
+        <div className="mt-16">
+          <div className="flex justify-center">
+            <h1>
+              <span className="p-5 text-4xl text-[#EA4335] max-md:text-lg">
+                Collaborate
+              </span>
+              <span className="p-5 text-4xl text-[#4285F4] max-md:text-lg">
+                Learn
+              </span>
+              <span className="p-5 text-4xl text-[#34A853] max-md:text-lg">
+                Explore
+              </span>
+              <span className="p-5 text-4xl text-[#FBBC05] max-md:text-lg">
+                Create
+              </span>
+            </h1>
+          </div>
+          <div className="p-5 text-xl text-[#676E74] flex justify-center">
+            <p className="align-middle text-center">
+              Meet and learn with other developers and build solutions for
+              <br />
+              communities with Google technology.
+            </p>
           </div>
         </div>
       </div>
-    </div>
   );
 }
 
