@@ -56,7 +56,7 @@ const EventCard = (props) => {
             >
               <div className="flex flex-col px-3 max-md:px-6  w-[75%] max-md:w-[90%]  pt-[25%] h-[90%]">
                 <span className="text-3xl max-sm:text-7xl max-md:text-5xl leading-[1.3em] font-semibold font-montserrat">
-                  <p>{cardElement.titleFrontTop} {cardElement.id}</p>
+                  <p>{cardElement.titleFrontTop}</p>
                   <p>{cardElement.titleFrontBottom}</p>
                 </span>
                 <span className="text-lg max-md:text-4xl max-sm:text-5xl leading-[1.3em] max-md:w-[70%] font-gSans">

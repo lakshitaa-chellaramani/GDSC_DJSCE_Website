@@ -74,7 +74,7 @@ const CoreTeam = () => {
         </div>
         <div className='flex flex-col items-center justify-center md:items-start'>
           <h2 className='font-bold text-[24px] md:text-[28px] lg:text-[32px]'>Our GDSC Treasurer</h2>
-          <p className='text-[16px] md:text-[20px] lg:text-[24px] mt-4 italic'>{coreData.secretary.description}</p>
+          <p className='text-[16px] md:text-[20px] lg:text-[24px] mt-4 italic'>{coreData.treasurer.description}</p>
         </div>
       </div>
 

@@ -2,11 +2,11 @@ import React from 'react';
 import {Link } from 'react-router-dom';
 const Navbar = () => {
   return (
-    <div>
+    <div className='main'>
       <nav className="bg-white border-2  border-white-400 dark:bg-white-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="GDSCLogo.jpg" className="h-16 w-40" alt="" />
+            <img src="GDSCLogo.jpg" className="h-16 w-60" alt="" />
           </a>
           <button
             data-collapse-toggle="navbar-default"
@@ -65,6 +65,8 @@ const Navbar = () => {
 
       <style jsx>{`
         .nav-item {
+          font-family: 'Barlow' !important;
+          font-size: 18px;
           text-lg;
           font-normal;
           cursor-pointer;
