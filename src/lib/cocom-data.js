@@ -186,7 +186,7 @@ const cocomData = {
             name: 'Lakshitaa Chellaramani',
             description: 'passionate learner and a staunch believer in hard work',
             instagram: 'https://www.instagram.com/lakshitaa.xo/',
-            github: 'https://github.com/lakshitaaaaaa',
+            github: 'https://github.com/lakshitaa-chellaramani',
             linkedIn: 'https://www.linkedin.com/in/lakshitaa-chellaramani-68254224b',
         },
         {

@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <header className="flex flex-wrap sm:justify-start dark:bg-transparent lg:dark:bg-black bg-white sm:flex-nowrap z-50 w-full  fixed top-0 backdrop-blur text-sm py-4 dark:bg-gray-800">
+      <header className="flex flex-wrap sm:justify-start dark:bg-white  bg-white sm:flex-nowrap z-50 w-full  fixed top-0  text-sm py-4 ">
         <nav
           className="max-w-[75rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between"
           aria-label="Global"
@@ -31,7 +31,7 @@ const Navbar = () => {
                 onClick={toggleMobileMenu}
               >
                 <svg
-                  className="hs-collapse-open:hidden  flex-shrink-0 w-4 h-4"
+                  className="hs-collapse-open:hidden dark:text-black flex-shrink-0 w-4 h-4"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
