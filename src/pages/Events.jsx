@@ -16,7 +16,7 @@ const Events = () => {
   return (
     <div className="">
       <div>
-        <p className="max-lg:text-[5vw] max-sm:text-[8vw] text-[5vw] w-fit m-auto text-center my-3 font-montserrat relative text-blue-950">
+        <p className="max-lg:text-[5vw] max-sm:text-[8vw] text-[50px] w-fit m-auto text-center my-3 font-montserrat relative text-blue-950">
           Events
           <span
             className="absolute bottom-0 left-1/2 transform -translate-x-1/2 inline-block w-full h-1 "
