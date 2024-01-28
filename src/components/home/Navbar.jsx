@@ -61,7 +61,7 @@ const Navbar = () => {
           <div
             id="navbar-image-and-text-1"
             className={`hs-collapse overflow-hidden  transition-all duration-300 basis-full grow sm:block ${
-              isMobileMenuOpen ? "block w-fit  bg-gray-50 border border-zinc-100 rounded-3xl p-5 font-semibold mt-6 " : "hidden  p-0 mt-0"
+              isMobileMenuOpen ? "block   bg-gray-50 border border-zinc-100 rounded-3xl p-5 font-semibold mt-6 " : "hidden  p-0 mt-0"
             }`}
           >
             <div className="flex flex-col gap-5 lg:gap-10  sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
