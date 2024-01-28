@@ -1,103 +1,142 @@
-import React from 'react';
-import {Link } from 'react-router-dom';
+import { useState } from "react";
+import { Link } from "react-router-dom/dist";
 const Navbar = () => {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
-    <div className='main'>
-      <nav className="bg-white border-2  border-white-400 dark:bg-white-900">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="GDSCLogo.jpg" className="h-16 w-60" alt="" />
-          </a>
-          <button
-            data-collapse-toggle="navbar-default"
-            type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white-500 rounded-lg md:hidden hover:bg-white-100 focus:outline-none focus:ring-2 focus:ring-white-200 dark:text-white-400 dark:hover:bg-white-700 dark:focus:ring-white-600"
-            aria-controls="navbar-default"
-            aria-expanded="false"
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
+    <div>
+      <header className="flex flex-wrap sm:justify-start dark:bg-transparent lg:dark:bg-black bg-white sm:flex-nowrap z-50 w-full  fixed top-0 backdrop-blur text-sm py-4 dark:bg-gray-800">
+        <nav
+          className="max-w-[75rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between"
+          aria-label="Global"
+        >
+          <div className="flex items-center justify-between">
+            <Link
+              className="inline-flex items-center gap-x-2 text-xl font-semibold dark:text-white"
+              to="/"
             >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
-          </button>
-          <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-white-100 rounded-lg bg-white-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-white-800 md:dark:bg-white-900 dark:border-white-700">
-              <Link to ="/">
-            <li>
-                <h1 className="nav-item">Home</h1>
-              </li>
-              </Link>
-              <Link to="/team">
-              <li>
-                <h1 className="nav-item">Our Team</h1>
-              </li>
-              </Link>
-              <Link to="/events"><li>
-                <h1 className="nav-item">Events</h1>
-              </li>
-              </Link>
-              <Link to="/gallery">
-              <li>
-                <h1 className="nav-item">Gallery</h1>
-              </li>
-              </Link>
-              {/* <Link to="/contactus">
-              <li>
-                <h1 className="nav-item">Contact Us</h1>
-              </li>
-              </Link> */}
-            </ul>
+              <div aria-hidden="true" className="flex space-x-1 dark">
+              <img src="GDSCLogo.jpg" className="w-60 h-16" alt=""/>
+              </div>
+              
+            </Link>
+            <div className="sm:hidden">
+              <button
+                type="button"
+                className={`hs-collapse-toggle p-2  inline-flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent dark:border-gray-700 dark:text-white dark:hover:bg-white/10 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600`}
+                onClick={toggleMobileMenu}
+              >
+                <svg
+                  className="hs-collapse-open:hidden  flex-shrink-0 w-4 h-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  {isMobileMenuOpen ? (
+                    <>
+                      <line key="line1" x1="18" y1="6" x2="6" y2="18" />
+                      <line key="line2" x1="6" y1="6" x2="18" y2="18" />
+                    </>
+                  ) : (
+                    <>
+                      <line key="line3" x1="3" x2="21" y1="6" y2="6" />
+                      <line key="line4" x1="3" x2="21" y1="12" y2="12" />
+                      <line key="line5" x1="3" x2="21" y1="18" y2="18" />
+                    </>
+                  )}
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
-      </nav>
+          <div
+            id="navbar-image-and-text-1"
+            className={`hs-collapse overflow-hidden  transition-all duration-300 basis-full grow sm:block ${
+              isMobileMenuOpen ? "block w-fit  bg-gray-50 border border-zinc-100 rounded-3xl p-5 font-semibold mt-6 " : "hidden  p-0 mt-0"
+            }`}
+          >
+            <div className="flex flex-col gap-5 lg:gap-10  sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
+              <Link
+                href="/"
+                className="font-medium nav-item text-gray-600 dark:text-zinc-200   "
+                aria-current="page"
+              >
+                Home
+              </Link>
+               <Link to="/team"
+                className="font-medium nav-item text-gray-600 dark:text-zinc-200 "
+                aria-current="page"
+              >
+                Our Team
+              </Link>
+              <Link to="/events"
+              className="font-medium nav-item text-gray-600 dark:text-zinc-200 "
+                aria-current="page"
+              >
+               Events
+              </Link>
+              <Link to="/gallery"
+              className="font-medium nav-item text-gray-600 dark:text-zinc-200 "
+                aria-current="page"
+              >
+               Gallery
+              </Link>
+              <Link to="/contactus"
+              className="font-medium nav-item text-gray-600 dark:text-zinc-200 "
+                aria-current="page"
+              >
+              Contact us
+              </Link>
+            </div>
+          </div>
+          
 
-      <style jsx>{`
-        .nav-item {
-          font-family: 'Barlow' !important;
-          font-size: 18px;
-          text-lg;
-          font-normal;
-          cursor-pointer;
-          transition: font-weight 0.3s;
-          color: black;
-          position: relative;
-        }
+<style jsx>{`
+.nav-item {
+  font-family: 'Barlow' !important;
+  font-size: 18px;
+  text-lg;
+  font-normal;
+  cursor-pointer;
+  transition: font-weight 0.3s;
+  color: black;
+  position: relative;
+}
 
-        .nav-item::before {
-          content: '';
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          width: 100%;
-          height: 2px;
-          background: linear-gradient(to right, #4285f4, #0f9d58, #f4b400, #db4437);
-          transform: scaleX(0);
-          transform-origin: bottom right;
-          transition: transform 0.3s ease-in-out;
-        }
+.nav-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #4285f4, #0f9d58, #f4b400, #db4437);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in-out;
+}
 
-        .nav-item:hover {
-          font-weight: bold;
-          cursor: pointer;
-        }
+.nav-item:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
 
-        .nav-item:hover::before {
-          transform: scaleX(1);
-          transform-origin: bottom left;
-        }
-      `}</style>
+.nav-item:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+`}</style>
+        </nav>
+      </header>
     </div>
   );
 };
