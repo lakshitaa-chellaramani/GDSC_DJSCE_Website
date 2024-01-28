@@ -21,7 +21,7 @@ const eventData = [
         titleFrontTop: "HackNiche 2.0",
         titleFrontBottom: "Hackathon",
         titleFrontColor: "#00021c",
-        backColor:"white",
+        backColor:"black",
         descBack: "HackNiche 2.0 is where the magic happens – a 24-hour hackathon where brilliant teams collaborate and compete",
         backAlbum:[Hackniche],
         date: "17th - 18th February, 2024",
